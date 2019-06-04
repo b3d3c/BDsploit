@@ -2,7 +2,7 @@
 
 BDsploit (Big Data Exploitation and Post-exploitation Toolkit) is a series of scripts use to exploit and gain access on DC/OS and Marathon clusters. It also provides the ability to use Shodan API to search on the internet for exploitable clusters.
 
-Please, only use this code if you can exploit a cluster
+Please, only use this code if you can exploit the cluster.
 
 ## Installation
 
