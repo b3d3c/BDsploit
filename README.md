@@ -18,7 +18,7 @@ source bin/activate
 
 Clone this project:
 ~~~~
-git clone https://github.com/ebdecastro/BDsploit && cd BDsploit
+git clone https://github.com/b3d3c/BDsploit && cd BDsploit
 ~~~~
 
 Install requirements:
